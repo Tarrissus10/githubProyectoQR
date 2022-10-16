@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>alumnoDetalle</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+    <ion-item *ngFor="let aux of alumno">
+      <ion-card>
+        <img src="{{ aux.imagen }}" alt="">
+        <ion-card-header>
+          <ion-card-title>{{ aux.nombre }} {{ aux.apellido }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{ aux.rut }}
+          {{ aux.tipo }}
+          {{ aux.asistencia }}
+          <ion-buttons slot="end">
+            <ion-button (click)="eliminar()">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+   </ion-list>
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="presentAlert()">
+      <ion-icon name="add"></ion-icon>  
+    </ion-fab-button>
+   </ion-fab>
+</ion-content>

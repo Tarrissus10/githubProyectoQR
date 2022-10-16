@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Alumnos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label></ion-label>
+  <ion-list>
+
+    <ion-item *ngFor="let aux of alumno">
+      <ion-card>
+        <img src="{{ aux.imagen }}" alt="">
+        <ion-card-header>
+          <ion-card-title>{{ aux.nombre }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          asdasdfasdf
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+   </ion-list>
+</ion-content>

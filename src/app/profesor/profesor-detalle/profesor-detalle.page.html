@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profesor-detalle</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-card *ngFor="let aux of profesores.data">
+        <img src="https://sleepy-plateau-36828.herokuapp.com/uploads/small_imagen_2022_10_16_015706205_67c93ddbde.png" alt="">
+        <ion-card-header>
+          <ion-card-title>{{ aux.attributes.nombre }} {{ aux.attributes.apellido }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{ aux.attributes.rut }}
+        </ion-card-content>
+        <ion-card-content>
+          {{ aux.attributes.createdAt }}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+   </ion-list>
+</ion-content>

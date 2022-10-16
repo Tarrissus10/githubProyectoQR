@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Alumnos
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item [routerLink]="['/alumnos/alumno-detalle']">
+      <ion-label>Perfil</ion-label>
+    </ion-item>
+    <ion-item  [routerLink]="['/alumnos']">
+      <ion-label >Curso</ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/scan']">
+      <ion-label >Escaner</ion-label>
+
+  </ion-item>
+ 
+
+
+  </ion-list>
+</ion-content>

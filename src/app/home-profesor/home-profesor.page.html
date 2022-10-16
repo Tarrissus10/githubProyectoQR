@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profesor</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item [routerLink]="['/profesor/profesor-detalle']">
+      <ion-label>Perfil</ion-label>
+    </ion-item>
+    <ion-item  [routerLink]="['/profesor']">
+      <ion-label >Curso</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label >Generar qr</ion-label>
+    <div> 
+      <ion-card>
+        <ngx-qrcode [elementType]="elementType" [value]="qrData"></ngx-qrcode>
+        <ion-input type="text" [(ngModel)]="qrData"></ion-input>
+      </ion-card>
+    </div>
+    </ion-item>
+    
+ 
+
+
+  </ion-list>
+</ion-content>
